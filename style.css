@@ -19,3 +19,11 @@ a.active{
     border-bottom: 5px solid red;
   }
 
+  .img-thumbnail {
+    height:250px;
+    width:100%;
+}
+
+.fab {
+    font-size: 25px;
+}
