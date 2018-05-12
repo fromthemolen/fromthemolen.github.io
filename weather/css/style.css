@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.container div img{
+  width: 4em;
+  height: 4em;
+}
+
+.weather {
+  background-color: #eee;
+  color: #555;
+  font-size: 1.1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  margin: 1em auto;
+  width: 100%;
+  position: relative;
+}
+
+.container-1 img {
+  max-width: 100%;
+  mix-blend-mode: luminosity;
+}
+
+
+.container-1 div,
+.container-1 h1{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 5em;
+  background-color: black;
+  padding: .5em .25em;
+  mix-blend-mode: difference;
+}
+
+button{
+  font-size: 0.5em;
+  margin: 0.2em;
+}
+.container-1 {
+  /* uncomment this if you want to isolate the contents of the container */
+
+  opacity: .97;
+}

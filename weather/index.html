@@ -1,127 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>A Pen by  J. van der Molen</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
 
-    <script>
-        $(document).ready(function () {
-            var state;
-            geoLocation();
-
-
-
-            function geoLocation() {
-                if ("geolocation" in navigator) { //check Geolocation available 
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        var location = [position.coords.latitude, position.coords.longitude];
-                        getWeather(location);
-                        return;
-                    });
-                } else {
-                    console.log("Geolocation not available!");
-                }
-            }
-
-            function getWeather(location) {
-                //e.preventDefault();
-                $.ajax({
-                    type: 'GET',
-                    url: "https://fcc-weather-api.glitch.me/api/current?lat=" + location[0] + "&lon=" + location[1],
-                    processData: true,
-                    data: {},
-                    dataType: "json",
-                    success: function (data) {
-                        displayTemperature(data);
-                        buttonClick(data.main.temp);
-                        displayBackground(data.weather[0].description);
-                    }
-                });
-            }
-            function displayBackground(description) {
-                if (description == 'clear sky') {
-                    $('.container').addClass('clearsky');
-                } else if (description == 'few clouds') {
-                    $('.container').addClass('fewclouds');
-                } else if (description == 'scattered clouds') {
-                    $('.container').addClass('scatteredclouds');
-                } else if (description == 'broken clouds') {
-                    $('.container').addClass('brokenclouds');
-                } else if (description == 'shower rain') {
-                    $('.container').addClass('showerrain');
-                } else if (description == 'rain') {
-                    $('.container').addClass('rain');
-                } else if (description == 'thunderstorm') {
-                    $('.container').addClass('thunderstorm');
-                } else if (description == 'snow') {
-                    $('.container').addClass('snow');
-                } else if (description == 'foggy') {
-                    $('.container').addClass('foggy');
-                }
-            }
-
-            function buttonClick(temp) {
-                $('.btn').click(function () {
-                    if (state) {
-                        state = !state;
-                        $('.btn').html('<span>Fahrenheit</span>');
-                        $('#temperature').html('<h1>' + temp + '&#8451;</h1>');
-                    } else {
-                        state = !state;
-                        var far = temp * (9 / 5) + 32;
-                        $('.btn').html('<span>Celsius</span>');
-
-                        $('#temperature').html('<h1>' + far + '&#8457;</h1>');
-
-                    }
-                });
-            }
-
-
-
-            function displayTemperature(data) {
-                var post = data;
-                $('#city').html('<h1>' + post.name + ', ' + post.sys.country + '</h1>')
-                $('#temperature').html('<h1>' + post.main.temp + '&#8451;</h1>');
-                $('#clouds').html('<h1>' + post.weather[0].main + '</h1>');
-                $('#picture').html('<img src="' + post.weather[0].icon + '"/>');
-            }
-        });
-
-    </script>
+  
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6" id="system">
-                <button id="system" class="btn btn-info">
-                    <span>Fahrenheit</span>
-                </button>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 " id="city">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 " id="temperature">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 " id="clouds">
-            </div>
-        </div>
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cookie"/>
 
-        <div class="row">
-            <div class="col-sm-12 " id="picture">
-            </div>
-        </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    </div>
+<div class="weather">
+  <div class="container container-1">
+  <img src="" id="background"alt="Weather">
+    <div></div>
+</div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
 
 </html>
