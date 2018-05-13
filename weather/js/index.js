@@ -49,8 +49,9 @@
                 if (description == 'Clear') {
                   $("#background").attr("src","https://fromthemolen.github.io/weather/clearsky.jpg");
                 } else if (description == 'Clouds') {
-                 $("#background").attr("src","https://fromthemolen.github.io/weather/clouds.jpg");                } else if (description == 'Drizzle') {
-$("#background").attr("src","https://fromthemolen.github.io/weather/showerrain.jpg");
+                 $("#background").attr("src","https://fromthemolen.github.io/weather/clouds.jpg");                
+                } else if (description == 'Drizzle') {
+                $("#background").attr("src","https://fromthemolen.github.io/weather/showerrain.jpg");
                 } else if (description == 'Rain') {
                   $("#background").attr("src","https://fromthemolen.github.io/weather/rain.jpg"); 
 
