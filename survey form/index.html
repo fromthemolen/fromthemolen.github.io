@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='./js/bundle.js'></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="col-10-l"></div>
+    <div class="col-80">
+        
+        <header>
+                <div class="col-25"></div>
+                <div class="col-75">
+                    <h1 id="title">Survey form</h1>
+                    </h1>
+                    <p id="description">Let us know how we can improve freeCodeCamp
+                    </p>
+            </div>
+        </header>
+
+        <section>
+            <form id="survey-form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="name" id="name-label">Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email" id="email-label">Email:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" id="email" name="email" placeholder="Enter your email adres" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="Age" id="number-label">Age:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" id="number" name="Age" placeholder="age" required min="12" max="120">
+                        </div>
+                    </div>
+                </div>
+                <div class="like">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="like">What do you like the most at freeCodeCamp?</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="dropdown">
+                                <option value="Challenges">Challenges</option>
+                                <option value="open source">Open source</option>
+                                <option value="Projects">Projects</option>
+                                <option value="Community">Community</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <fieldset>
+                        <div class="col-25">
+                            <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+                        </div>
+                        <div class="col-75 radio-field">
+                            <div class="fieldgroup">
+                                <input type="radio" id="definitely" name="recommend" value="definitely">
+                                <label for="choice1">Definitely</label>
+                            </div>
+                            <div class="fieldgroup">
+
+                                <input type="radio" id="maybe" name="recommend" value="maybe">
+                                <label for="choice2">Maybe</label>
+                            </div>
+                            <div class="fieldgroup">
+
+                                <input type="radio" id="not sure" name="recommend" value="not sure">
+                                <label for="choice3">Not sure</label>
+                            </div>
+                </fieldset>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Things that should be improved in the future (Check all that apply):
+                            </label>
+                        </div>
+                        <div class="col-75">
+                            <div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="front" name="improvement" value="front">
+                                    <label for="choice1">Front-end Projects</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="back" name="improvement" value="back">
+                                    <label for="choice1">Back-end Projects</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="data" name="improvement" value="data">
+                                    <label for="choice1">Data Visualization</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="chall" name="improvement" value="chall">
+                                    <label for="choice1">Challenges</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="open" name="improvement" value="open">
+                                    <label for="choice1">Open Source Community</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="gitter" name="improvement" value="gitter">
+                                    <label for="choice1"> Gitter help rooms</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="videos" name="improvement" value="videos">
+                                    <label for="choice1"> Videos</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="city" name="improvement" value="city">
+                                    <label for="choice1"> City Meetups</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="wiki" name="improvement" value="wiki">
+                                    <label for="choice1"> Wiki</label>
+                                </div>
+                                <div class="fieldgroup">
+
+                                    <input type="checkbox" id="forum" name="improvement" value="forum">
+                                    <label for="choice1"> Forum</label>
+                                </div>
+
+                                <div class="fieldgroup">
+                                    <input type="checkbox" id="courses" name="improvement" value="courses">
+
+                                    <label for="choice1"> Additional Courses</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <div class="row comments">
+                    <div class="col-25">
+                        <label for="comments">Any comments or suggestions?</label>
+                    </div>
+                    <div class="col-75">
+                            <textarea placeholder="Place your comments here..." rows="5" cols="45"></textarea>
+
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25"></div>
+                    <div class="col-75">
+
+                        <div class="button">
+                            <input type="submit" id="submit" value="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <footer>
+        </footer>
+        </div>
+    </div>
+    <div class="col-10-r"></div>
+</body>
+
+</html>
