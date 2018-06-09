@@ -3,17 +3,383 @@
 
 <head>
     <script src='./js/bundle.js'></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Coffeebeans selling point</title>
+    <style>
+        body {
+            background-color: #1C7182;
+        }
+
+
+        .all {
+            display: flex;
+            flex-direction: row;
+        }
+
+        article {
+            margin: 5vh 5vw 5vh 5vw;
+        }
+
+        .col-10-l,
+        .col-10-r {
+            width: 10vw;
+        }
+
+        .col-main {
+            width: 80vw;
+        }
+
+        #header {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            background-color: #8BA0B4;
+            z-index: 999999;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            padding-bottom: 1vh;
+        }
+
+        #video {
+            margin: 0 auto;
+            display: block;
+        }
+
+        #preparation {
+            display: flex;
+
+        }
+
+        #header-img {
+            height: 5vh;
+        }
+
+        #wikipedia,
+        .product {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .production,
+        .machines {
+            display: flex;
+            flex-direction: column;
+            width: 25vw;
+        }
+
+        .machines {
+            border: black solid 0.1em;
+            margin: 1em;
+            background-color: white;
+
+        }
+
+        .production {
+            border: black solid 0.1em;
+            margin-left: 1em;
+            margin-right: 1em;
+            background-color: white;
+        }
+
+        .production p {
+            text-align: justify;
+        }
+
+        .machines h2 {
+            text-align: center;
+
+        }
+
+        .summary-heading h3,
+        .machines-header h3 {
+            margin: 1em;
+            padding: 0.5em;
+        }
+
+        .production p {
+            margin: 2em;
+        }
+
+        .youtube {
+            position: relative;
+        }
+
+        .machine-img {
+            margin: 0 auto;
+            display: block;
+            height: 100%;
+            width: 20vw;
+        }
+
+        .machines ul {
+            list-style: none;
+        }
+
+        .nav ul {
+            list-style: none;
+            background-color: inherit;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .nav li {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2em;
+            line-height: 3em;
+            margin: 0 3em 0 3em;
+            padding: 0.5em;
+            height: 3em;
+            border-bottom: 1px solid;
+            float: right;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            transition: .3s background-color;
+        }
+
+        .nav a:hover {
+            background-color: #1C7182;
+            padding: 0 1em;
+        }
+
+        .nav a.active {
+            background-color: #fff;
+            color: #444;
+            cursor: default;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        section {
+            display: flex;
+        }
+
+        .machines-header,
+        .summary-heading {
+            background-color: #8BA0B4;
+        }
+
+        #main,
+        #youtube-preparation,
+        #oroducts {
+            padding-top: 10vh;
+        }
+
+        #form {
+            background-color: white;
+            padding: 5vh 3vw 5vh 3vw;
+            align-content: center;
+            margin: auto;
+            border: black solid 0.1em;
+            display: flex;
+            flex-direction: column;
+            width: 15vw;
+        }
+
+        form label,
+        form input {
+            display: flex;
+        }
+
+        form label {
+            margin: 1vh 0 0.5vh 0;
+        }
+
+        @media (max-width: 962px) {
+
+            .all {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #wikipedia,
+            .product {
+                flex-direction: column;
+            }
+
+            .production,
+            .machines {
+                width: 75vw;
+                margin: 1vh;
+            }
+
+            .col-10-l {
+                width: 0vw;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <header id="header">
-        <img id="header-img" src="./images/coffee.svg">
-        <nav id="nav-bar"></nav>
+        <img id="header-img" src="https://fromthemolen.github.io/productpage/images/coffee.svg">
+        <h1>Made with coffee</h1>
+        <nav class="nav" id="nav-bar">
+            <ul>
+                <li>
+                    <a href="#main" class="nav-link">Summary</a>
+                </li>
+                <li>
+                    <a href="#youtube-preparation" class="nav-link">Preparation</a>
+                </li>
+                <li>
+                    <a href="#products" class="nav-link">Products</a>
+                </li>
+                <li>
+                    <a href="#subscription" class="nav-link">Subscription</a>
+                </li>
+
+            </ul>
+        </nav>
     </header>
+    <div class="all">
+
+        <div class="col-10-l"></div>
+        <div class="col-main">
+            <main id="main">
+                <article id="wikipedia">
+                    <section id="summary" class="production">
+                        <div class="summary-heading">
+                            <h3>Wikipedia summary</h3>
+                        </div>
+                        <p>
+                            Coffee production is the industrial process of converting the raw fruit of the coffee plant into the finished coffee. The
+                            coffee cherry has the fruit or pulp removed leaving the seed or bean which is then dried. While
+                            all green coffee is processed, the method that is used varies and can have a significant effect
+                            on the flavor of roasted and brewed coffee. Coffee production is a major source of income, especially
+                            for developing countries where coffee is grown. By adding value, processing the coffee locally,
+                            coffee farmers and countries can increase the revenue from coffee.
+                        </p>
+                    </section>
+                    <section class="production">
+                        <div class="summary-heading">
+
+                            <h3>Variety of beans</h3>
+                        </div>
+                        <p>
+                            Coffee varieties are the diverse subspecies derived through selective breeding or natural selection of coffee plants. While
+                            there is tremendous variability encountered in both wild and cultivated coffee plants, there
+                            are a few varieties and cultivars that are commercially important due to various unique and inherent
+                            traits such as disease resistance and fruit yield. These unique traits are what producers use
+                            to select breeds when developing crops. Therefore, at a micro level, breed selection is critical
+                            to the success of a producer and is one of the key components of cup quality.
+                        </p>
+                    </section>
+                    <section class="production">
+                        <div class="summary-heading">
+
+                            <h3>Preparation of the coffee</h3>
+                        </div>
+                        <p>
+                            Coffee preparation is the process of turning coffee beans into a beverage. While the particular steps vary with the type
+                            of coffee and with the raw materials, the process includes four basic steps: raw coffee beans
+                            must be roasted, the roasted coffee beans must then be ground, the ground coffee must then be
+                            mixed with hot water for a certain time (brewed), and finally the liquid coffee must be separated
+                            from the used grounds. Coffee is usually brewed immediately before drinking. In most areas, coffee
+                            may be purchased unprocessed, or already roasted, or already roasted and ground. Coffee is often
+                            vacuum packed to prevent oxidation and lengthen its shelf life.
+                        </p>
+                    </section>
+                </article>
+                <article class="youtube" id="youtube-preparation">
+                    <section id="preparation">
+                        <iframe id="video" width="320" height="180" src="https://www.youtube.com/embed/1qfjLCOXMMg?wmode=transparent" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </section>
+                </article>
+                <article class="product" id="products">
+                    <section class="machines">
+                        <div class="machines-header">
+                            <h3>Old coffeebeans rotater</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                Old fashioned
+                            </li>
+                            <li>
+                                Cheap
+                            </li>
+                            <li>
+                                Works without electricity
+                            </li>
 
 
+                        </ul>
+
+                        <img class="machine-img" src="./images/machine3.jpg">
+                        <h2>1€</h2>
+                    </section>
+                    <section class="machines">
+                        <div class="machines-header">
+                            <h3>Deluxe coffee beans machine</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                Lot of coffee taste options
+                            </li>
+                            <li>
+                                Quality
+                            </li>
+                            <li>
+                                1 coffee at the same time
+                            </li>
+                        </ul>
+
+                        <img class="machine-img" src="./images/machine1.jpg">
+                        <h2>499€</h2>
+
+                    </section>
+
+                    <section class="machines">
+                        <div class="machines-header">
+                            <h3>Ultralux coffee beans machine</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                Brand new
+                            </li>
+                            <li>
+                                Quality
+                            </li>
+                            <li>
+                                2 coffee at once
+                            </li>
+
+
+                        </ul>
+                        <img class="machine-img" src="./images/machine2.jpg">
+                        <h2>999€</h2>
+
+                    </section>
+
+                </article>
+                <article class="subscribe">
+                    <section id="subscription">
+                        <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
+                            <label>For a subscription to news updates you could enter your e-mail adress here.
+                            </label>
+                            <label> E-mail adress</label>
+                            <input id="email" placeholder="example@example.com" type="email" name="email" required>
+                            <label>Submit</label>
+                            <input id="submit" type="submit">
+                        </form>
+                    </section>
+                </article>
+            </main>
+
+            <footer></footer>
+        </div>
+        <div class="col-10-r"></div>
+    </div>
 </body>
 
 </html>
