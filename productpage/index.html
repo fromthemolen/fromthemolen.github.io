@@ -6,39 +6,24 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Coffeebeans selling point</title>
     <style>
-        .all {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #wikipedia,
-        .product {
-            flex-direction: column;
-        }
-
-        .production,
-        .machines {
-            width: 75vw;
-            margin: 1vh;
-        }
-
-        .col-10-l {
-            width: 0vw;
-
-        }
-
         body {
             background-color: #1C7182;
         }
 
 
-
+        .all {
+            display: flex;
+            flex-direction: row;
+        }
 
         article {
             margin: 5vh 5vw 5vh 5vw;
         }
 
-    
+        .col-10-l,
+        .col-10-r {
+            width: 10vw;
+        }
 
         .col-main {
             width: 80vw;
@@ -47,7 +32,7 @@
         #header {
             position: fixed;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             background-color: #8BA0B4;
             z-index: 999999;
             width: 100vw;
@@ -70,7 +55,18 @@
             height: 5vh;
         }
 
+        #wikipedia,
+        .product {
+            display: flex;
+            flex-direction: row;
+        }
 
+        .production,
+        .machines {
+            display: flex;
+            flex-direction: column;
+            width: 25vw;
+        }
 
         .machines {
             border: black solid 0.1em;
@@ -197,195 +193,27 @@
             margin: 1vh 0 0.5vh 0;
         }
 
-
-        @media only screen and (min-width: 600px) {
-            body {
-                background-color: #1C7182;
-            }
-
+        @media only screen and (max-width: 962px) {
 
             .all {
                 display: flex;
-                flex-direction: row;
-            }
-
-            article {
-                margin: 5vh 5vw 5vh 5vw;
-            }
-
-            .col-10-l,
-            .col-10-r {
-                width: 10vw;
-            }
-
-            .col-main {
-                width: 80vw;
-            }
-
-            #header {
-                position: fixed;
-                display: flex;
-                flex-direction: row;
-                background-color: #8BA0B4;
-                z-index: 999999;
-                width: 100vw;
-                top: 0;
-                left: 0;
-                padding-bottom: 1vh;
-            }
-
-            #video {
-                margin: 0 auto;
-                display: block;
-            }
-
-            #preparation {
-                display: flex;
-
-            }
-
-            #header-img {
-                height: 5vh;
+                flex-direction: column;
             }
 
             #wikipedia,
             .product {
-                display: flex;
-                flex-direction: row;
+                flex-direction: column;
             }
 
             .production,
             .machines {
-                display: flex;
-                flex-direction: column;
-                width: 25vw;
+                width: 75vw;
+                margin: 1vh;
             }
 
-            .machines {
-                border: black solid 0.1em;
-                margin: 1em;
-                background-color: white;
-
+            .col-10-l {
+                width: 0vw;
             }
-
-            .production {
-                border: black solid 0.1em;
-                margin-left: 1em;
-                margin-right: 1em;
-                background-color: white;
-            }
-
-            .production p {
-                text-align: justify;
-            }
-
-            .machines h2 {
-                text-align: center;
-
-            }
-
-            .summary-heading h3,
-            .machines-header h3 {
-                margin: 1em;
-                padding: 0.5em;
-            }
-
-            .production p {
-                margin: 2em;
-            }
-
-            .youtube {
-                position: relative;
-            }
-
-            .machine-img {
-                margin: 0 auto;
-                display: block;
-                height: 100%;
-                width: 20vw;
-            }
-
-            .machines ul {
-                list-style: none;
-            }
-
-            .nav ul {
-                list-style: none;
-                background-color: inherit;
-                text-align: center;
-                padding: 0;
-                margin: 0;
-                display: inline-block;
-            }
-
-            .nav li {
-                font-family: 'Oswald', sans-serif;
-                font-size: 1.2em;
-                line-height: 3em;
-                margin: 0 3em 0 3em;
-                padding: 0.5em;
-                height: 3em;
-                border-bottom: 1px solid;
-                float: right;
-            }
-
-            .nav a {
-                text-decoration: none;
-                color: black;
-                display: block;
-                transition: .3s background-color;
-            }
-
-            .nav a:hover {
-                background-color: #1C7182;
-                padding: 0 1em;
-            }
-
-            .nav a.active {
-                background-color: #fff;
-                color: #444;
-                cursor: default;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            section {
-                display: flex;
-            }
-
-            .machines-header,
-            .summary-heading {
-                background-color: #8BA0B4;
-            }
-
-            #main,
-            #youtube-preparation,
-            #oroducts {
-                padding-top: 10vh;
-            }
-
-            #form {
-                background-color: white;
-                padding: 5vh 3vw 5vh 3vw;
-                align-content: center;
-                margin: auto;
-                border: black solid 0.1em;
-                display: flex;
-                flex-direction: column;
-                width: 15vw;
-            }
-
-            form label,
-            form input {
-                display: flex;
-            }
-
-            form label {
-                margin: 1vh 0 0.5vh 0;
-            }
-
         }
     </style>
 </head>
