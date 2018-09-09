@@ -1,0 +1,4 @@
+V   Er moet een klok op de pagina zichtbaar zijn
+*   Er zijn jpg's zichtbaar op de pagina die veranderen op variabele tijden
+        voor opstaan, lunch en slaaptijden
+*   Er is een party knop met een animatie

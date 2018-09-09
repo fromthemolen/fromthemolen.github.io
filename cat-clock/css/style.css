@@ -1,0 +1,44 @@
+body {
+    background-color: red;
+}
+.header, .time, .cat-photo, .options, .btn{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 2vh;
+}
+
+select {
+    display: block;
+    margin: 2em;
+    padding: 1vh;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 972px){
+    body {
+        background-color: blue;
+    }
+    .header, .time, .cat-photo, .options, .btn{
+        width: 100vw;
+    }
+    .cat-photo {
+        margin: auto;
+    }
+    select {
+        margin: auto;
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    img{ 
+        width: 80vw;
+        margin: auto;
+    }
+}

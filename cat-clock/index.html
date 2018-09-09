@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>This is a dynamic clock page.</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Cat clock time</h1>
+    </div>
+    <div class="time">
+
+        <h1>
+            <span id="time">Time: </span>
+            <span id="hours"></span>:
+            <span id="minutes"></span>:
+            <span id="seconds"></span>
+        </h1>
+    </div>
+
+
+
+
+    <div class="cat-photo">
+        <img id="cat-photo" src="./img/typingcat.jpg" height="200" width="300">
+
+    </div>
+
+    <div class="options">
+        <select id="wake-up-time">
+        </select>
+
+        <select id="lunch-time">
+        </select>
+
+        <select id="dinner-time">
+        </select>
+
+        <select id="bed-time">
+        </select>
+
+    </div>
+    <div class="btn">
+        <button type="button" onclick="PartyTime()">Party time!</button>
+    </div>
+
+    <footer class="footer">
+        <a href="https://fromthemolen.github.io/cat-photo" target="_blank" class="github-link">View source on <span>GitHub</span></a><br />
+    </footer>
+
+
+    <script src="./js/main.js">
+    </script>
+</body>
+
+</html>
