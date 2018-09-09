@@ -37,7 +37,7 @@ a:active {
 
 @media only screen and (max-width: 972px){
     body {
-        background-color: rgb(117, 30, 30);
+        background-color: aquamarine;
     }
     .header, .time, .cat-photo, .options, .btn, footer{
         width: 100vw;
