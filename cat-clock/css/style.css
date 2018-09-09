@@ -5,15 +5,12 @@ body {
     margin: auto;
     width: 50%;
     text-align: center;
-    padding: 2vh;
 }
 
 select {
     display: block;
-    margin: 2em;
-    padding: 1vh;
     text-align: center;
-    width: 30%;
+    width: 300px;
     margin: auto;
 }
 
@@ -41,12 +38,15 @@ a:active {
     }
     .header, .time, .cat-photo, .options, .btn, footer{
         width: 100vw;
+        padding: none;
     }
     .cat-photo {
         margin: auto;
     }
     select {
         margin: auto;
+        padding: none;
+        margin: none;
     }
 
     img {
