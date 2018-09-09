@@ -27,7 +27,7 @@ window.setInterval(function () {
     let bed = document.getElementById("bed-time");
     let bedtime = bed.options[bed.selectedIndex].value;
     if (state === true) {
-        document.getElementById('cat-photo').src = "party.jpg";
+        document.getElementById('cat-photo').src = "./img/party.jpg";
         if (previousvalue > -1) {
             previousvalue = -1
         } else {
