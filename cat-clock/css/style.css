@@ -23,7 +23,7 @@ footer {
 
 @media only screen and (max-width: 972px){
     body {
-        background-color: blue;
+        background-color: red;
     }
     .header, .time, .cat-photo, .options, .btn, footer{
         width: 100vw;
