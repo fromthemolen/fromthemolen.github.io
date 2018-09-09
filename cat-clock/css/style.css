@@ -1,5 +1,5 @@
 body {
-    background-color: red;
+    background-color: aquamarine;
 }
 .header, .time, .cat-photo, .options, .btn, footer{
     margin: auto;
@@ -17,13 +17,27 @@ select {
     margin: auto;
 }
 
-footer {
+a:link {
     color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: underline;
+}
+a:hover {
+    color: black;
+    text-decoration: underline
+}
+a:active {
+    color: red;
+    text-decoration: underline
+
 }
 
 @media only screen and (max-width: 972px){
     body {
-        background-color: red;
+        background-color: rgb(117, 30, 30);
     }
     .header, .time, .cat-photo, .options, .btn, footer{
         width: 100vw;
