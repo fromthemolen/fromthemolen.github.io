@@ -1,7 +1,7 @@
 body {
     background-color: red;
 }
-.header, .time, .cat-photo, .options, .btn{
+.header, .time, .cat-photo, .options, .btn, footer{
     margin: auto;
     width: 50%;
     text-align: center;
@@ -15,6 +15,10 @@ select {
     text-align: center;
     width: 30%;
     margin: auto;
+}
+
+footer {
+    color: black;
 }
 
 @media only screen and (max-width: 972px){
