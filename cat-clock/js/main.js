@@ -1,5 +1,5 @@
 var previousvalue = -1;
-var state;
+var state = false;
 
 
 window.setInterval(function () {
@@ -97,7 +97,9 @@ function calculateuptime(k, increment, min, max) {
 }
 
 function PartyTime() {
-    state = !state;
+    setTimeout(function() {
+        state = !state;
+    }, 1000);
 }
 
 generateList('wake up time', 'wake-up-time', 0, 1);
