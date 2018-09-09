@@ -59,4 +59,8 @@ a:active {
         width: 80vw;
         margin: auto;
     }
+
+    select {
+        width: 100vw;
+    }
 }
