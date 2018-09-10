@@ -34,16 +34,16 @@
     </div>
 
     <div class="options">
-        <select id="wake-up-time">
+        <select id="wake-up-time" onchange="setBedTimeAndLunchTime()">
         </select>
 
-        <select id="lunch-time">
+        <select id="lunch-time" onchange="setWakeUpTimeAndDinnerTime()">
         </select>
 
-        <select id="dinner-time">
+        <select id="dinner-time" onchange="setLunchTimeAndBedTime()">
         </select>
 
-        <select id="bed-time">
+        <select id="bed-time" onchange="setDinnerTimeAndWakeUpTime()">
         </select>
 
     </div>
