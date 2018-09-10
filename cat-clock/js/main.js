@@ -48,7 +48,6 @@ function calculateuptime(k, increment, min, max) {
     let j;
 
     j = k + increment;
-    console.log(j);
     if (j >= max) {
         j = max - j;
         if (j <= min) {
