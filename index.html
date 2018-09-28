@@ -1,90 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <head>
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
 
-    <script>
-        $(document).ready(function () {
-            $('li a').click(function () {
-                $('.nav-link').removeClass('active');
-                $(this).addClass('active');
-            });
-        });
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 
+    </head>
 
-        $(function () {
-            "use strict";
-            $(window).on("scroll", function (event) {
-                var $scrollPos = $(document).scrollTop() + $(".navbar").height(),
-                    $links = $('.nav-link'),
-                    $scrollBot = $(document).height() - $(window).height() + $(".navbar").height();
-                $links.each(function () {
-                    var $currLink = $(this),
-                        $refElement = $($currLink.attr("href"));
-                    if ($refElement.position().top <= $scrollPos && $refElement.position().top + $refElement.height() > $scrollPos || $scrollBot == $scrollPos) {
-                        $links.removeClass("active");
-                        $currLink.addClass("active");
-                    } else {
-                    }
-                });
-            });
-        });
-    </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-        crossorigin="anonymous">
+    <body>
+        <div class="container">
+            <header id="home">
+                <div class="row">
+                    <nav class="navigation absolute-navigation">
+                        <a class="mobile-nav-icon js--nav-icon"><ion-icon name="menu"></ion-icon></a>
 
+                        <ul class="menu js--main-nav">
+                            <li class="">
+                                <a class="" href="#home">Home</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="#about-me">About me</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="#contact">Contact</a>
+                            </li>
+                        </ul>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="jumbotron  alert-success">
-        <nav class="navbar fixed-top navbar-light bg-light">
-            <div class="container">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active  text-dark" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-dark" href="#about-me">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-dark" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-dark" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <br>
-        <br>
-
-
-        <div class="container  bg-light  text-dark" id="home">
-
-            <div class="row d-flex align-items-center h-100">
-                <div class="col-lg-6">
-                    <h1>J. van der Molen, MSc </h1>
+                    </nav>
                 </div>
-                <div class="col-lg-4">
-                    <br>
-                    <br>
-                    <img src="./vandermolen.jpg" class="rounded-circle" />
-                    <br>
-                    <br>
+
+                <div class="row">
+                    <figure class="profile-img">
+                        <img class="img-center" src="./vandermolen.jpg" alt="profile picture of the portfolio">
+                    </figure>
+                    <h1>Portfolio J. van der Molen</h1>
                 </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="container  bg-dark text-light" id="about-me">
-            <div class="row">
-                <div class="col-lg-12 text-light">
+            </header>
+            <section class="about-me js--section-about-me" id="about-me">
+                <div class="row">
                     <h2>About me</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
@@ -102,116 +60,216 @@
                         Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque
                         cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam.
                     </p>
-                    <br>
                 </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="container  bg-light  text-dark" id="portfolio">
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-lg-12">
+            </section>
+            <section class="portfolio-section" id="portfolio">
+                <div class="row">
                     <h2>Portfolio</h2>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <a href="./tributepage/index.html">
-                        <img src="./tributepage/images/bobby_fischer.jpg" class="img-fluid img-thumbnail" alt="Responsive image">
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <img src="application.jpg" class="img-fluid img-thumbnail" alt="Responsive image">
+                <div class="row">
+                    <ul class="portfolio-projects clearfix">
+
+                        <li>
+                            <figure class="portfolio-img">
+                                <a href="./cat-clock/index.html">
+                                    <img src="./cat-clock.jpg" class="img-portfolio" alt="Link to portfolio project about a cat clock">
+                                </a>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="portfolio-img">
+                                <a href="./documentationpage/index.html">
+                                    <img src="./documentationpage.jpg" class="img-portfolio" alt="Link to portfolio project about Node js">
+                                </a>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="portfolio-img">
+                                <a href="./tributepage/index.html">
+                                    <img src="./coffeebeans.jpg" class="img-portfolio" alt="Link to portfolio project about coffee beans">
+                                </a>
+                            </figure>
+
+                        </li>
+                        <li>
+                            <figure class="portfolio-img">
+                                <a href="./tributepage/index.html">
+                                    <img src="./fischer.jpg" class="img-portfolio" alt="Link to portfolio project about Bobby Fisher">
+                                </a>
+                            </figure>
+                        </li>
+                    </ul>
 
                 </div>
-                <div class="col-lg-4">
-                    <img src="company.jpg" class="img-fluid  img-thumbnail" alt="Responsive image">
 
-                </div>
-            </div>
+                <div class="row">
+                    <ul class="portfolio-projects">
+                        <li>
+                            <figure class="portfolio-img">
 
-            <div class="row">
-                <br>
-                <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <img src="agenda.jpg" class="img-fluid  img-thumbnail" alt="Responsive image">
-                </div>
-                <div class="col-lg-4">
-                    <img src="application.jpg" class="img-fluid  img-thumbnail" alt="Responsive image">
-                </div>
-                <div class="col-lg-4">
-                    <img src="company.jpg" class="img-fluid  img-thumbnail" alt="Responsive image">
-                </div>
-            </div>
-            <br>
-            <br>
-        </div>
-        <br>
-        <br>
-        <div class="container  bg-dark text-light" id="contact">
-            <div class="row">
-                <div class="col-lg-12">
+                                <a href="./quotemachine/index.html">
+                                    <img src="./quotemachine.jpg" class="img-portfolio" alt="Link to portfolio project about Bobby Fisher">
+                                </a>
+                            </figure>
+                        </li><li>
+                        <figure class="portfolio-img">
 
+                            <a href="./survey%20form/index.html">
+                                <img src="./surveyform.jpg" class="img-portfolio" alt="Link to portfolio project about a cat clock">
+                            </a>
+                        </figure>
+                        </li><li>
+                        <figure class="portfolio-img">
+
+                            <a href="./weather/index.html">
+                                <img src="./weather.jpg" class="img-portfolio" alt="Link to portfolio project about a cat clock">
+                            </a>
+                        </figure></li><li>
+                        <figure class="portfolio-img">
+
+                            <a href="./omnifood/index.html">
+                                <img src="./projectcourseomnifood.jpg" class="img-portfolio" alt="Link to portfolio project about coffee beans">
+                            </a>
+                        </figure></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="form">
+                <div class="row" id="contact">
                     <h2>Contact</h2>
-                </div>
-                <div class="col-lg-12">
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="surName"></label>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="surName">Surname </label></div>                        
+                            <div class="col span-2-of-3">
                                 <input type="text" class="form-control border-top-0 border-right-0 border-left-0 bg-dark text-light" id="surName" placeholder="Surname">
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="lastName"></label>
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 bg-dark text-light" id="lastName" placeholder="Lastname">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="E-mail"></label>
-                            <input type="email" class="form-control border-top-0 border-right-0 border-left-0 bg-dark text-light" id="email" placeholder="info@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Message</label>
-                            <textarea class="form-control" id="message" rows="5"></textarea>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <button type="submit" class="btn btn-success">Message</button>
+                            <div class="col span-1-of-3">
+                                <label for="lastName">Last name</label>
                             </div>
- 
+                            <div class="col span-2-of-3">
+                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 bg-dark text-light" id="lastName" placeholder="Lastname"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+
+                                <label for="E-mail">E-mail</label>
+                            </div>
+                            <div class="col span-2-of-3">
+
+                                <input type="email" class="form-control border-top-0 border-right-0 border-left-0 bg-dark text-light" id="email" placeholder="info@example.com">
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col span-1-of-3">
+                                <label for="exampleFormControlTextarea1">Message</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <textarea class="form-control" id="message" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3"></div>
+                            <div class="col span-2-of-3">
+                                <input type="submit" class="btn">
+                            </div>
                         </div>
                     </form>
-
-
-
-
-
-
-                    <br>
-                    <br>
                 </div>
-            </div>
+            </section>
+            <footer class="">
+                <div class="row">
+                    <p>
+                        Written and coded by
+                        J van der Molen in 2018.
+                    </p>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/jarich-van-der-molen/"><ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
+                        <a href="https://fromthemolen.github.io/"><ion-icon name="logo-github" class="github"></ion-icon></a>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </div>
-    </div>
-    <footer class="restict-width text-center">
-        <div class="row">
-            <div class="col-md-4">
-        <p>
-            Written and coded by
-            <a href="#">J van der Molen</a> in 2018.
-        </p>
-</div>
-        <div class="col-md-4">
-            <a href="https://www.linkedin.com/in/jarich-van-der-molen/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://fromthemolen.github.io/"><i class="fab fa-github"></i></a>
-            <a href="https://forum.freecodecamp.org/u/molen/summary"><i class="fab fa-free-code-camp"></i></a>
-        </div></div>
-    </footer>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="./vendors/js/jquery.waypoints.min.js"></script>
+
+        <script>
+            $(document).ready(function() {            // Select all links with hashes
+                $('a[href*="#"]')
+                // Remove links that don't actually link to anything
+                    .not('[href="#"]')
+                    .not('[href="#0"]')
+                    .click(function(event) {
+                    // On-page links
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                        && 
+                        location.hostname == this.hostname
+                    ) {
+                        // Figure out element to scroll to
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000, function() {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+
+
+
+            })
+            $(function() {            
+                var waypoint1 = new Waypoint({
+                    element: document.getElementsByClassName("js--section-about-me"),
+                    handler: function(direction) {
+                        if(direction == "down"){
+                            $("nav").addClass('sticky');
+                            $("nav").removeClass('absolute-navigation');
+                        }else{
+                            $("nav").removeClass('sticky');
+                            $("nav").addClass('absolute-navigation');
+
+                        }
+                    },
+                    offset: 20 
+                });
+
+                $('.js--nav-icon').on('click', function(event) {
+                    var nav = $('.js--main-nav');
+                    nav.slideToggle(200);
+                    var icon = $('.js--nav-icon ion-icon');
+                    if(icon.attr('name') === 'close'){
+                        icon.removeAttr("name");
+                        icon.attr('name', 'menu');
+
+                    }else{
+                        icon.removeAttr('name');
+                        icon.attr('name', 'close'); 
+                    }
+                });
+
+            });
+
+        </script>
+    </body>
 
 </html>

@@ -1,0 +1,144 @@
+/* Small big tablets to 1200px: from 1024 to 1200px */
+
+@media only screen and (max-width: 1200px) {
+
+    .hero-text-box {
+        width: 100%;
+        padding: 2%;
+    }
+    .row {padding: 2%;}
+    .icon-small { width: 10px;}
+    .city-feature {font-size: 80%;}
+}
+
+
+/* Small ipad to tablets: from 768 to 1023px */
+
+@media only screen and (max-width: 1023px) {
+    body {font-size: 18px;}
+    section {padding: 60px 0;}
+    .long-copy { 
+        width: 80%;
+        margin-left: 10%;
+    }
+    .steps-box { margin-top: 10px;}
+    .steps-box:last-child {margin-top: 10px;}
+    .works-step:last-of-type { margin-bottom: 80px;}
+    .app-screen { width: 50%; }
+    .icon-small { width: 10px;}
+    .city-feature {font-size: 80%;}
+    .plan-price { font-size: 100%;}
+    .contact-form { 
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+
+
+/* Small phones to small tablets: from 481 to 767px */
+
+@media only screen and (max-width: 767px) {
+    body {font-size: 16px;}
+    section {padding: 30px 0;}
+    .row,
+    .hero-text-box {padding: 0 4%}
+
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    h1 { font-size: 180%}
+    h2 { font-size: 140%}
+
+    .works-step div {
+        color: #e66e22;
+        border: 2px solid #e66e22;
+        display: inline-block;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding: 4px;
+        float: left;
+        font-size: 120%;
+        margin-right: 15px;
+    }
+    .steps-box:first-child {
+        text-align: center; 
+        padding-right: 3%;
+        margin-top: 30px;
+    }
+    .app-screen {
+        width: 33%
+    }
+
+
+    .mobile-nav-icon { 
+        display: inline-block;
+    }
+    
+    .main-nav { display: none;}
+
+    .main-nav {
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+        
+        display: none;
+    }
+
+    .main-nav li {
+        display: block;
+        border: 0;
+    }
+
+
+    .main-nav li a:link, 
+    .main-nav li a:link
+    {
+        display: block;
+        border: 0;
+        padding: 5px 0;
+    }
+
+    .sticky .main-nav { margin-top: 18px; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+        color: #555;
+
+    }
+
+
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+    
+    .sticky ion-icon {
+        margin-top: -10px;
+        color: #555;
+    }
+}
+
+
+
+/* Small phones: from 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+    section {
+        padding: 25px;
+    }
+
+    .contact-form {width: 100%;
+        margin-left: 0%;}
+
+
+}
