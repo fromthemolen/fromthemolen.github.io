@@ -35,7 +35,22 @@ header {
     background-color: #e0e0e0;
     padding: 30px 5px 40px 5px;
     position: relative;
+    background-image: url(arrows-blur-close-up-163130.jpg);
+    height: 100vh;
+    background-size: cover;
+    color: #c9c9c9;
+    background-attachment: fixed;
+
 }
+
+.profile-heading {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .menu {
     width: 100%;
@@ -43,6 +58,7 @@ header {
     text-align: left;
     display: none;
     margin-left: 20px;
+    
 
 }
 
@@ -60,19 +76,20 @@ header h1 {
 
 .menu a {
     text-decoration: none;
-    color: black;
+    color: #c9c9c9;
+;
     padding-bottom: 6px;
 }
 
 .menu a:visited
 .menu a:link {
-    color: black;
+    color: #c9c9c9;
 }
 
 .menu a:active,
 .menu a:hover {
-    color: black;
-    border-bottom: solid 2px black;
+    color: #c9c9c9;
+    border-bottom: solid 2px #c9c9c9;
 }
 
 .img-center {
@@ -87,14 +104,26 @@ header h1 {
 .sticky {
     position: fixed;
     z-index: 99;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     width: 100%;
     top: 0;
     left: 0;
     padding-top: 10px;
     margin-left: 0px;
     padding-left: 20px;
+    color: black;
 }
+
+.sticky .menu a{
+    color: black;
+}
+
+.sticky .menu a:active,
+.sticky .menu a:hover {
+        border-bottom: solid 2px black;
+
+}
+
 
 
 .absolute-navigation {
@@ -114,6 +143,7 @@ p {
     text-align: justify;
     background-color: rgba(0, 137, 16, 0.33);
     padding: 0px 10px;
+    
 }
 
 /* ================================*/
@@ -220,6 +250,12 @@ input[type=submit] {
     transition: background-color 1s, border 1s, color 1s;
 }
 
+    .background-form {
+        background-image: url(chess-checkmated-chess-pieces-black-white-957312.jpeg);
+        background-size: cover;
+            background-attachment: fixed;
+
+    }
 
 /* ================================*/
 /*          FOOTER                 */
@@ -257,6 +293,10 @@ footer p {
         display: block;
         float: left;
     }
+    
+    .row {
+        padding-right: 25px;
+    }
 
 
     .sticky,
@@ -264,6 +304,8 @@ footer p {
         width: 90%;
         margin-left: 5%;
     }
+    
+
 
     form .row {
         padding: 0;
