@@ -132,6 +132,15 @@ header h1 {
     z-index: 10;
 }
 
+
+footer a:hover,
+footer a:active,
+.navigation:hover,
+.navigation:active {
+    cursor: pointer;
+    
+}
+
 /* ================================*/
 /*          PARAGRAPH              */
 /* ================================*/
@@ -250,13 +259,18 @@ textarea {
     height: 100px;
 }
 
+input[type=submit]:active,
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
 input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
-    background-color: rgba(0, 137, 16, 0.33);
+    background-color: rgba(0, 137, 16, 0.66);
     transition: background-color 1s, border 1s, color 1s;
 }
 
