@@ -1,66 +1,160 @@
-body {
-    background-color: aquamarine;
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    background-color: 000;
+    color: #555555;
+    font-family: 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    overflow-x: hidden;
+}
+
 .header, .time, .cat-photo, .options, .btn, footer{
     margin: auto;
     width: 50%;
     text-align: center;
 }
 
+footer span{
+    color: rgba(0, 121, 175, 0.9);
+}
+
+
+
 select {
     display: block;
     text-align: center;
-    width: 300px;
+    width: 100vw;
     margin: auto;
+    -moz-border-radius: 4px;
+    -moz-box-shadow: 1px 1px 5px #cfcfcf inset;
+    border: 1px solid #cfcfcf;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 25px 10px;
+    font-size: 75%;
+    font-weight: 600;
+}
+
+
+option {
+    background-color: #fef5e6;
+    border-bottom: 1px solid #ebdac0;
+    border-right: 1px solid #d6bb86;
+    border-left: 1px solid #d6bb86;
+}
+option:hover {
+    cursor: pointer;
+}
+
+.btn {
+    margin: 5px auto 10px auto;
+    padding: 25px 0px;
+    position: relative;
+
+}
+
+button {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 121, 175, 0.34);
+    font-weight: 600;
+    font-size: 75%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+button {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+a {
+    color: rgba(0, 121, 175, 0.9);
 }
 
 a:link {
-    color: black;
     text-decoration: none;
 }
 a:visited {
-    color: black;
-    text-decoration: underline;
 }
 a:hover {
-    color: black;
-    text-decoration: underline
+    border-bottom: solid 5px rgba(0, 121, 175, 0.34);
 }
 a:active {
-    color: red;
-    text-decoration: underline
-
 }
 
-@media only screen and (max-width: 972px){
-    body {
-        background-color: aquamarine;
+body {
+    background-image: url(../img/cat-close-up-cute-122437.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+    color: white;
+}
+
+
+h1, h2 {
+    text-shadow: 2px 2px 2px #000;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+img { 
+    width: 400px;
+    height: auto;
+    margin: 25px;
+}
+
+main {
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    img {
+        width: 400px;
+        margin: 25px 0;
     }
+
+
     .header, .time, .cat-photo, .options, .btn, footer{
         width: 100vw;
         padding: none;
     }
-    .cat-photo {
-        margin: auto;
-    }
-    select {
-        margin: auto;
-        padding: none;
-        margin: none;
-    }
 
-    img {
-        width: 300px;
-    }
-}
 
-@media only screen and (max-width: 360px){
+@media only screen and (min-width: 400px){
     img{ 
-        width: 80vw;
+        width: 400px;
         margin: auto;
     }
 
     select {
-        width: 100vw;
+        width: 400px;
     }
 }
